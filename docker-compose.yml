@@ -1,0 +1,33 @@
+version: "3"
+services:
+  cfml:
+    container_name: cfml
+    image: ortussolutions/commandbox
+    restart: always
+    environment:
+      PORT: 443
+      SSL_PORT: 443
+    volumes:
+      - "./:/app"
+    ports:
+      - 127.0.0.1:80:80
+      - 127.0.0.1:443:443
+    networks:
+      - backend
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost" ]
+      interval: 1m30s
+      timeout: 5s
+      retries: 10
+      start_period: 25s
+
+  node-app:
+    build: .
+    ports:
+      - "8080:8080"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

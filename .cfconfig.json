@@ -1,0 +1,7 @@
+{
+    "adminPassword": "defaultpass",
+    "useTimeServer": "true",
+    "templateCharset": "UTF-8",
+    "webCharset": "UTF-8",
+    "whitespaceManagement": "regular"
+}
