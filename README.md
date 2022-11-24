@@ -1,4 +1,4 @@
-# cf-socketio-example
+# cf-socketio
 
 This example is based on the [demo](https://github.com/GiancarloGomez/ColdFusion-Realtime-With-WebSockets-Demo-Code) from [Giancarlo Gomez](https://github.com/GiancarloGomez).
 I simple took only the needed resources and create a docker environment for it.
